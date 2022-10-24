@@ -1,21 +1,28 @@
 package org.sid.ws;
 
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebService;
+
 import java.util.Date;
 import java.util.List;
 
 //POJO : Plain Old Java Object   :  est un simple class java
 
+@WebService(serviceName = "banqueWS")
 public class BanqueService {
 
-    public double convert(double mt) {
+    @WebMethod(operationName = "Convert")
+    public double convert(@WebParam(name = "montant") double mt) {
         return mt*10.54;
     }
 
-    public Compte getCompte(int code) {
+    @WebMethod()
+    public Compte getCompte(@WebParam(name = "code") int code) {
         return new Compte(code ,100*Math.random()+1000,new Date());
     }
 
-
+    @WebMethod()
     public List<Compte> listComptes() {
         return List.of(
                 new Compte(1 ,100*Math.random()+1000,new Date()),
