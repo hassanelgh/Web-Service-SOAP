@@ -9,7 +9,7 @@ import java.util.List;
 
 //POJO : Plain Old Java Object   :  est un simple class java
 
-@WebService(serviceName = "banqueWS")
+@WebService(serviceName = "BanqueWS")
 public class BanqueService {
 
     @WebMethod(operationName = "Convert")
