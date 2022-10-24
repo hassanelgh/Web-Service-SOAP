@@ -1,10 +1,20 @@
 package org.sid.ws;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
+
 import java.util.Date;
 
+
+@XmlRootElement(name = "compte")
+@XmlAccessorType(XmlAccessType.FIELD) // dit au jaxB que les annotations sont dans les attributes n'ont pas dans getter et setter
 public class Compte {
     private  int code;
     private double solde;
+
+    @XmlTransient // ignore la serialization de cette attribute
     private Date dateCreation;
 
     public Compte(int code, double solde, Date dateCreation) {

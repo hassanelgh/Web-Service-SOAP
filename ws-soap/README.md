@@ -63,7 +63,9 @@
 
             <img src="images/img_11.png" alt="">
 
+6. serialization de classe Compte :  (on utilise JaxB pour faire la convertion de Java à XML et l'inverse )
 
+   <img src="images/img_12.png" alt="">
 
 
 
