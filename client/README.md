@@ -26,6 +26,11 @@
    * proxy
 
       <img src="images/img_5.png" alt=""> 
-     
     
     
+4. communiquer avec Web Service banqueWS :
+
+   <img src="images/img_6.png" alt=""> 
+
+
+   <img src="images/img_7.png" alt=""> 
